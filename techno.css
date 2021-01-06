@@ -6,20 +6,24 @@ p { margin: 0; }
 
 
 /* Header */
-header { 
+.pc-header { 
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100px;
-  z-index: 2;
+  z-index: 10;
+  transition: .3s;
 }
+.pc-header.fill { background-color: #00247e; }
+.pc-header.fill .header-con { width: 90%; }
 .header-con {
   display: flex; 
   justify-content: space-between; 
   align-items: center;
   height: 100%; width: 85%; 
   margin: 0 auto; 
+  transition: .5s;
 }
-.nav { display: flex; }
+.nav { display: flex; color: #fff; }
 .nav > li > ul { display: none; }
 .tools { display: flex; color: #fff; }
 
@@ -38,7 +42,7 @@ header {
   font-size: 35px;
   color: royalblue;
   background-color: #fff;
-  transition: .3s;
+  transition: .5s;
   opacity: 0;
   visibility: hidden;
 }
@@ -75,7 +79,7 @@ header {
   top: 0; left: 0;
   width: 100%; height: 100%; 
   z-index: 1;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.3);
 }
 
 /* Intro */
@@ -121,3 +125,55 @@ header {
   backface-visibility: hidden;
 }
 .card-back { transform: rotateY(180deg); }
+
+/* About */
+.about { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+}
+.about-con { 
+  display: flex;
+  width: 60%;
+}
+.about-main h1 { font-size: 40px;}
+.about-main h1 span { 
+  display: block; 
+  margin: 0 0 16px;
+  font-size: 16px; color: #0c5adb; letter-spacing: 5px; font-weight: bold;
+}
+
+/* Service */
+.service { 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  height: 1300px;
+}
+.service-con {
+  width: 60%;
+  border: 1px solid black;
+}
+.service-content {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 45% 45%;
+  gap: 3%;
+  height: 800px;
+  border: 1px solid black;
+}
+.service-card { 
+  text-align: center;
+  height: 100%; 
+  box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+.service-con > span { display: block; text-align: center; }
+
+/* More About */
+.more-about { height: 800px; border: 1px solid black; }
+
+/* Portfolio */
+.portfolio { height: 850px; border: 1px solid black; }

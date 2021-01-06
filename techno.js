@@ -9,7 +9,7 @@ const move = (currentIndex) => {
 }
 
 welcomePrev[0].addEventListener('click', () => {
-  welcomeCon[0].style.transition = '.3s';
+  welcomeCon[0].style.transition = '.5s';
   move(currentIndex - 1);
   currentIndex-=1;
   if(currentIndex==0){
@@ -18,12 +18,12 @@ welcomePrev[0].addEventListener('click', () => {
       welcomeCon[0].style.transition = '0s';
       move(2)
       currentIndex=2;
-    }, 301);
+    }, 501);
   }
   console.log(currentIndex)
 })
 welcomeNext[0].addEventListener('click', () => {
-  welcomeCon[0].style.transition = '.3s';
+  welcomeCon[0].style.transition = '.5s';
   move(currentIndex + 1);
   currentIndex+=1;
   if(currentIndex==welcomePages.length-1){
@@ -32,9 +32,20 @@ welcomeNext[0].addEventListener('click', () => {
       welcomeCon[0].style.transition = '0s';
       move(1)
       currentIndex=1;
-    }, 301);
+    }, 501);
   }
   console.log(currentIndex)
 })
 move(1)
 
+// Header Scroll Event
+const pcHeader = document.getElementsByClassName('pc-header');
+
+window.addEventListener('scroll', () => {
+  if(scrollY>300) { 
+    pcHeader[0].classList.add('fill');
+  }
+  else {
+    pcHeader[0].classList.remove('fill');
+  }
+})
