@@ -1,0 +1,117 @@
+@media (max-width: 480px) {
+  /* Header */
+  .pc-header { position: relative; height: 60px; background-color: #0c5adb; }
+  .header-con { width: 100%; }
+  .header-con > a { width: 100px; }
+  .header-con > a img { width: 100%; }
+  .nav {
+    position: absolute;
+    top: 100%; left: 0;
+    width: 100%; height: auto;
+    max-height: 0;
+    padding: 0 15px;
+    overflow: hidden;
+    flex-direction: column;
+    background-color: #fff;
+    color: #232323; transition: 1s;
+  }
+  .nav.slide-down { max-height: 2000px; }
+  .nav > li {  width: 100%; border-bottom: 1px solid #ddd; }
+  .nav > li a { 
+    display: flex; 
+    align-items: center; justify-content: space-between; 
+    width: 100%;  
+    padding: 10px 30px; 
+    font-size: 14px;  
+  }
+  .nav-title { flex-direction: column; height: auto; font-size: 14px; }
+  .nav-submenu { 
+    position: static; 
+    width: 100%; 
+    max-height: 0;
+    opacity: 1; visibility: visible; 
+    box-shadow: none; 
+    transform: translateY(0);
+    overflow: hidden;
+    transition: 1s;
+  }
+  .nav-submenu.active { max-height: 1000px; }
+
+  .tools { display: none; }
+
+  .header-trigger { display: block; }
+
+  /* Welcome */
+  .welcome { height: 300px; }
+  .welcome-text h1 { margin: 0 0 20px; font-size: 21px;}
+  .welcome-text h1 > p { margin: 0 0 5px; font-size: 54px; }
+  .welcome-text div a { width: 100px; height: 40px; font-size: 12px; line-height: 40px; }
+
+  /* Intro */
+  .intro { height: auto; padding: 80px 0; box-sizing: border-box; }
+  .intro-con { flex-direction: column; width: 100%; }
+  .intro-card-con { width: 100%; height: 200px; }
+  .card-front > span { margin: 0 0 20px; }
+
+  /* About */
+  .about { height: auto; padding: 0 15px; box-sizing: border-box; }
+  .about-con { flex-direction: column; width: 100%; }
+  .about-main { margin: 0 0 50px; }
+  .about-img { margin: 0 0 50px; }
+  .about-img img { width: 100%; }
+
+  /* Service */
+  .service { height: auto; }
+  .service-con { width: 100%; margin: 80px 0 0; }
+  .service-con > h1 { font-size: 28px; }
+  .service-con > h1 p { width: 80%; }
+  .service-content {
+    display: flex; 
+    flex-direction: column;
+    width: 100%; height: auto;
+  }
+  .service-card { padding: 30px 15px; margin: 0 0 30px; }
+
+  /* More About */
+  .more-about { height: auto; padding: 50px 0; }
+  .more-about-con { flex-direction: column; width: 100%; }
+  .more-about-main > a:nth-of-type(1) { margin: 50px 30px; }
+  .more-about-img,
+  .more-about-main { width: 100%; padding: 0 15px; box-sizing: border-box; }
+
+  /* Portfolio */
+  .portfolio-con { width: 100%; }
+  .portfolio-con > h1 { width: 100%; font-size: 28px; padding: 0 80px; box-sizing: border-box; }
+  .portfolio-con > h1 span { margin: 0 0 10px; }
+  .portfolio-badge { flex-direction: column; }
+  .portfolio-badge > a { width: 100%; margin: 0 0 10px; padding: 10px 20px; box-sizing: border-box; }
+  .portfolio-content { display: flex; flex-direction: column; }
+  .portfolio-card { width: 100%; height: 500px; }
+  .portfolio-card > img { object-fit: cover; }
+  
+  /* Member */
+  .member { height: auto; }
+  .member-con { width: 100%; }
+  .member-con > h1 { width: 60%; margin: 70px 0;  font-size: 28px; }
+  .member-content { flex-direction: column; }
+  .member-card { width: 100%; margin: 0 0 50px; }
+  .member-card-name { padding: 30px 0; }
+
+  /* Price */
+  .price { height: auto; }
+  .price-con { width: 100%; }
+  .price-con > h1 { width: 100%; margin: 70px 0; font-size: 28px; }
+  .price-content { flex-direction: column; }
+  .price-card { width: 100%; margin: 0 30px; }
+  .price-card > a { margin: 0 auto 50px; }
+
+  /* Footer */
+  footer { height: auto; padding: 0 50px; box-sizing: border-box; }
+  .footer-con { width: 100%; }
+  .footer-top { flex-direction: column; }
+  .footer-top > div,
+  .footer-top > ul { width: 100%; margin: 0 0 20px; }
+  .footer-sns { padding: 0; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .footer-bottom > div a { width: 30%; font-size: 14px; text-align: center; margin: 20px 0; }
+}
